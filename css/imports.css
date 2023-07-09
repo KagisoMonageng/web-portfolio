@@ -1,0 +1,12 @@
+@font-face {
+    font-family:"my-mono" ;
+    src: url("../assets/fonts/Qhairo-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "valorax";
+    src: url("../assets/fonts/Valorax-lg25V.otf") format("opentype");
+}
+@font-face {
+    font-family: "game-on";
+    src: url("../assets/fonts/AGOXES-GAME.otf") format("opentype");
+}
