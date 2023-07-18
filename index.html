@@ -16,6 +16,9 @@
     <script type="text/javascript" src="lib/scrollmagic/uncompressed/ScrollMagic.js"></script>
     <script type="text/javascript" src="lib/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
     <script type="text/javascript" src="lib/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+    <script type="text/javascript" src="lib/gsap/TextPlugin.min.js"></script>
+
+    <script  type="text/javascript" src="lib/lottie.min.js"></script>
     
     <!-- Linking -->
     <link rel="stylesheet" href="css/main.css">
@@ -23,18 +26,33 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
-    <header></header>
-
+<body id="body-color">
     <main>
-        <section class="first-sec aurora relative bg-black" id="1st">
-            <div
-                class="content font-mono text-center px-16 py-8 rounded-xl shadow-xl">
-                <h2 class="font-mono ">Hello World!</h2>
-                <p class="-mb-2">I am</p>
-                <h1 class="font-sans font-bold text-3xl gradient-text -mt-2">Kagiso Monageng</h1>
-                <p class="w-80">I am frontend developer with programming experience in these:</p>
-                <div class="flex place-items-center gap-3 w-80 h-24 p-5 rounded-lg bg-gray-300 bg-opacity-20 hover:shadow-sm"
+        <section id="loading-screen" class="fixed flex-col gap-3 top-0 left-0 text-white font-semibold text-xl">
+            <div class="loading" id="anim-load"></div>
+            <p>Loading ...</p>
+            <script>
+                var load = document.getElementById("anim-load");
+                var animation = bodymovin.loadAnimation({
+						container: load,
+						renderer: 'svg',
+						loop: true,
+						autoplay: false,
+						path: 'assets/anims/loading.json', // lottie file path
+						intro: 0.5, // number of seconds for the animation to fade in
+						outro: 0.5, // number of seconds for the animation to fade out
+                        speed: 0.5 //
+					})
+                    animation.setSpeed(0.5);
+            </script>
+        </section>
+        <section class="first-sec relative" id="1st">
+            <p id="hello">Hello World, I am </p>
+            <h1 class="font-sans font-bold my-name text-white drop-shadow-lg" id="my-name">Kagiso<span id="surname">Monageng</span></h1>
+            <img src="assets/images/Wall-iiso.png" id="my-image" alt="" srcset="" class="iiso-trans">
+            <div class="content py-8">
+                <p class="w-64" id="short-bio">A frontend developer with three years of programming experience in these:</p>
+                <div class="flex place-items-center gap-3 w-80 py-3 px-5 rounded-xl hover:shadow-sm"
                     id="logos">
                     <div class="logo">
                         <svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"
@@ -113,7 +131,7 @@
                 </div>
             </div>
             <div id="sroll-ind" class="font-mono text-white text-center absolute bottom-5 flex flex-col gap-2">
-                <p class="blink-2 line-1 anim-typewriter">Scroll down for more</p>
+                <p id="scroll-down" class="blink-2 line-1 anim-typewriter"></p>
                 <svg enable-background="new 0 0 128 128" id="Layer_1" version="1.1" viewBox="0 0 128 128"
                     xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <g>
@@ -128,9 +146,12 @@
 
 
         <section class="sec-sec bg-white" id="2nd">
-            <div class="content text-center">
-                <p id="first-line">Built over passion, creativity<br>and with <span class="gradient-text">Love</span> for the <span
+            <div class="content">
+                <p id="first-line" class="text-left">Built over passion, creativity<br>and with <span class="gradient-text">Love</span> for the <span
                         class="gradient-text">Web</span></p>
+
+                        <p class="my-work-warning" id="my-work">You're about to see some of<span class="gradient-text"> my work</span></p>
+                        <p class="big-my-work gradient-text">My<br>Work</p>
             </div>
 
         </section>

@@ -1,14 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   overflow-x: hidden;
-
+  background-image: linear-gradient(to right,#434343, #979797);
 }
 *{
   scroll-behavior: smooth;
 }
 
+/* Width and height of the scrollbar track */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+}
+
+/* Background color of the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #272727;
+}
+
+/* Color of the scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 20px;
+}
+
+/* Color on hover or active state of the scrollbar handle */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  
+}
+
 section {
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   place-items: center;
@@ -19,7 +43,7 @@ section {
   background: linear-gradient(to right, #12c2e9 0%, #C471ED 50%, #F64F59 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  height: 50px;
+  
 }
 
 .aurora {
