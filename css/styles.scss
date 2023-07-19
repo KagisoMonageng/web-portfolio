@@ -271,7 +271,24 @@
         color: #000;
     }
 }
+// .over-lay::before{
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     height: 50px;
+//     width: 100%;
+//     background: linear-gradient(to bottom, #fff , transparent);
+// }
 
+.preview-screen{
+    scale:0.23;
+    top: -2px;
+    z-index: 1;
+}
+.mac-book{
+    width: 30%;
+    z-index: 0;
+}
 .use-app-griend {
     background-color: #2EB722;
     border-radius: 15px;

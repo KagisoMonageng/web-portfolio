@@ -18,8 +18,8 @@
     <script type="text/javascript" src="lib/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
     <script type="text/javascript" src="lib/gsap/TextPlugin.min.js"></script>
 
-    <script  type="text/javascript" src="lib/lottie.min.js"></script>
-    
+    <script type="text/javascript" src="lib/lottie.min.js"></script>
+
     <!-- Linking -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/imports.css">
@@ -34,26 +34,27 @@
             <script>
                 var load = document.getElementById("anim-load");
                 var animation = bodymovin.loadAnimation({
-						container: load,
-						renderer: 'svg',
-						loop: true,
-						autoplay: false,
-						path: 'assets/anims/loading.json', // lottie file path
-						intro: 0.5, // number of seconds for the animation to fade in
-						outro: 0.5, // number of seconds for the animation to fade out
-                        speed: 0.5 //
-					})
-                    animation.setSpeed(0.5);
+                    container: load,
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: false,
+                    path: 'assets/anims/loading.json', // lottie file path
+                    intro: 0.5, // number of seconds for the animation to fade in
+                    outro: 0.5, // number of seconds for the animation to fade out
+                    speed: 0.5 //
+                })
+                animation.setSpeed(0.5);
             </script>
         </section>
         <section class="first-sec relative" id="1st">
             <p id="hello">Hello World, I am </p>
-            <h1 class="font-sans font-bold my-name text-white drop-shadow-lg" id="my-name">Kagiso<span id="surname">Monageng</span></h1>
+            <h1 class="font-sans font-bold my-name text-white drop-shadow-lg" id="my-name">Kagiso<span
+                    id="surname">Monageng</span></h1>
             <img src="assets/images/Wall-iiso.png" id="my-image" alt="" srcset="" class="iiso-trans">
             <div class="content py-8">
-                <p class="w-64" id="short-bio">A frontend developer with three years of programming experience in these:</p>
-                <div class="flex place-items-center gap-3 w-80 py-3 px-5 rounded-xl hover:shadow-sm"
-                    id="logos">
+                <p class="w-64" id="short-bio">A frontend developer with three years of programming experience in these:
+                </p>
+                <div class="flex place-items-center gap-3 w-80 py-3 px-5 rounded-xl hover:shadow-sm" id="logos">
                     <div class="logo">
                         <svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"
                             xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +113,7 @@
                                 <polygon fill="#FFFFFF"
                                     points="24.363,6 7.607,6 8,10 8.619,17 19.503,17 19.148,20.984 16,21.99 12.857,20.984 12.648,19    8.803,19 9.262,23.987 16,25.99 22.728,23.986 23.718,13 12.252,13 12.002,10 24,10  " />
                             </g>
-                           
+
                         </svg>
                     </div>
                     <div class="logo">
@@ -125,7 +126,7 @@
                                 <polygon fill="#FFFFFF"
                                     points="24.363,6 7.607,6 8,10 16,10 8.25,12.99 8.619,17 19.502,17 19.158,21 16,21.99 12.861,20.984    12.533,19 8.803,19 9.262,23.987 16,25.99 22.728,23.986 23.719,12.99 16.026,12.99 24,10  " />
                             </g>
-                            
+
                         </svg>
                     </div>
                 </div>
@@ -147,19 +148,23 @@
 
         <section class="sec-sec bg-white" id="2nd">
             <div class="content">
-                <p id="first-line" class="text-left">Built over passion, creativity<br>and with <span class="gradient-text">Love</span> for the <span
-                        class="gradient-text">Web</span></p>
+                <p id="first-line" class="text-left">Built over passion, creativity<br>and with <span
+                        class="gradient-text">Love</span> for the <span class="gradient-text">Web</span></p>
 
-                        <p class="my-work-warning" id="my-work">You're about to see some of<span class="gradient-text"> my work</span></p>
-                        <p class="big-my-work gradient-text">My<br>Work</p>
+                <p class="my-work-warning" id="my-work">You're about to see some of<span class="gradient-text"> my
+                        work</span></p>
+                <p class="big-my-work gradient-text">My<br>Work</p>
             </div>
 
         </section>
+        
 
-        <section id="griend" class="green-sec-bg relative ">
-            <video class=" h-full absolute w-full object-cover" src="assets/videos/vecteezy_green-bokeh-particle__701.mp4"
-                autoplay loop muted preload="auto"></video>
-            <div class="over-lay w-full h-full backdrop-blur-3xl flex justify-center place-items-center relative">
+        <section id="griend" class="green-sec-bg relative">
+            <img src="assets/images/griend/greind.png" alt="" class="preview-screen absolute">
+            <img src="assets/images/griend/air.png" alt="" class="mac-book absolute">
+            <video class=" h-full absolute w-full object-cover"
+                src="assets/videos/vecteezy_green-bokeh-particle__701.mp4" loop muted preload="auto"></video>
+            <div id="overlay-griend" class="over-lay w-full h-full backdrop-blur-3xl flex justify-center place-items-center relative">
                 <div class="content w-4/5 mx-auto">
                     <p class="huge-text-name font-bold text-white mb-10">
                         G-riend <span>Gamer</span>
@@ -167,31 +172,38 @@
                     <div class="flex w-full h-full justify-between gap-6">
                         <div class="about-this">
                             <h2>About this app</h2>
-                            <p>This is a <strong>mobile app</strong> created for gamer geeks like me to share information about
-                                games and their gameplays. It allows gamers to have a new platform to socialize and become
+                            <p>This is a <strong>mobile app</strong> created for gamer geeks like me to share
+                                information about
+                                games and their gameplays. It allows gamers to have a new platform to socialize and
+                                become
                                 friends in the world that they love.</p>
-                            <p>Built using <strong>Angular 2+, Node Js, Express, PostgreSQL and the Tailwind CSS</strong>
+                            <p>Built using <strong>Angular 2+, Node Js, Express, PostgreSQL and the Tailwind
+                                    CSS</strong>
                                 framework</p>
                             <a href="https://g-riend-gamer-app.vercel.app/" target="_blank" rel="nonreferer"
                                 class="btn px-7 my-5 text-white btn-ghost use-app-griend">Try this app</a>
                         </div>
                         <div class="images-cont px-3 w-full min-h-full flex justify-center gap-3">
                             <img src="assets/Images/griend/Index.png" alt="" class="screenshot rounded-xl">
-                            <img src="assets/Images/griend/localhost_4200_(Samsung Galaxy S20 Ultra) (3).png" alt="" class="screenshot rounded-xl">
-                            <img src="assets/Images/griend/localhost_4200_(Samsung Galaxy S20 Ultra) (4).png" alt="" class="screenshot rounded-xl">
-                            <img src="assets/Images/griend/localhost_4200_(Samsung Galaxy S20 Ultra) (5).png" alt="" class="screenshot rounded-xl">
-                            <img src="assets/Images/griend/localhost_4200_(Samsung Galaxy S20 Ultra) (6).png" alt="" class="screenshot rounded-xl">
-        
+                            <img src="assets/Images/griend/localhost_4200_(Samsung Galaxy S20 Ultra) (3).png" alt=""
+                                class="screenshot rounded-xl">
+                            <img src="assets/Images/griend/localhost_4200_(Samsung Galaxy S20 Ultra) (4).png" alt=""
+                                class="screenshot rounded-xl">
+                            <img src="assets/Images/griend/localhost_4200_(Samsung Galaxy S20 Ultra) (5).png" alt=""
+                                class="screenshot rounded-xl">
+                            <img src="assets/Images/griend/localhost_4200_(Samsung Galaxy S20 Ultra) (6).png" alt=""
+                                class="screenshot rounded-xl">
+
                         </div>
-        
-        
-        
+
+
+
                     </div>
-        
-        
+
+
                 </div>
-        
-        
+
+
                 <span class="game-on">griend</span>
                 <span class="game-on">gamer</span>
                 <span class="game-on">play</span>
@@ -200,38 +212,42 @@
                 <span class="game-on">friend</span>
             </div>
         </section>
-        
+
         <section id="skoolify" class="aurora relative bg-white">
             <!-- <video class="h-full absolute w-full object-cover"  autoplay loop muted preload="auto" src="assets/videos/vecteezy_abstract-circle-light-flare-background_20938115_611.mp4"></video> -->
-            <div class="over-lay w-full h-full backdrop-blur-3xl flex justify-center place-items-center relative z-10">
+            <div id="overlay-skoolify" class="over-lay w-full h-full backdrop-blur-3xl flex justify-center place-items-center relative z-10">
                 <div class="content w-4/5 mx-auto">
                     <p class="huge-text-name font-bold mb-10 skoolify">
                         Sk<span>o</span><span>o</span>lify</p>
                     <div class="flex w-full h-full justify-between gap-6">
                         <div class="about-this skoolify">
                             <h2>About this app</h2>
-                            <p>This is a <strong>web app</strong> created for parents to easliy find school trasportation for their children. It is also beneficial to vehicle owners who look to make a living off driving. I worked on this with a team of fellow developers</p>
-                            <p>Built using <strong>Angular 2+, Node Js, Express, PostgreSQL and the Tailwind CSS</strong>
+                            <p>This is a <strong>web app</strong> created for parents to easliy find school
+                                trasportation for their children. It is also beneficial to vehicle owners who look to
+                                make a living off driving. I worked on this with a team of fellow developers</p>
+                            <p>Built using <strong>Angular 2+, Node Js, Express, PostgreSQL and the Tailwind
+                                    CSS</strong>
                                 framework</p>
                             <!-- <a href="#" target="_blank" rel="nonreferer"
                                 class="btn px-7 my-5 btn-ghost">Not Hosted As Yet</a> -->
                         </div>
                         <div class="images-cont px-3 w-full min-h-full flex justify-center gap-3">
-                            <img src="assets/images/skoolify/schools.png" alt="" class="screenshot rounded-xl shadow-md">
+                            <img src="assets/images/skoolify/schools.png" alt=""
+                                class="screenshot rounded-xl shadow-md">
                             <img src="assets/images/skoolify/menu.png" alt="" class="screenshot rounded-xl shadow-md">
                             <img src="assets/images/skoolify/list.png" alt="" class="screenshot rounded-xl shadow-md">
                             <img src="assets/images/skoolify/req.png" alt="" class="screenshot rounded-xl shadow-md">
                             <img src="assets/images/skoolify/cars.png" alt="" class="screenshot rounded-xl shadow-md">
-        
+
                         </div>
-        
-        
-        
+
+
+
                     </div>
-        
-        
+
+
                 </div>
-        
+
                 <span class="game-on skoolify">school</span>
                 <span class="game-on skoolify">driver</span>
                 <span class="game-on skoolify">child</span>
@@ -239,12 +255,12 @@
                 <span class="game-on skoolify">mommy</span>
                 <span class="game-on skoolify">daddy</span>
             </div>
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         </section>
     </main>
 

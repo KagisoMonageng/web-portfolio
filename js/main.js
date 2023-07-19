@@ -79,8 +79,34 @@ let sec_section_entry = new ScrollMagic.Scene({
 let sec_section_scoll = new ScrollMagic.Scene({
   triggerElement: "#first-line",
   triggerHook: 0.6
-}).setTween(sec_tl).addTo(controller).addIndicators()
+}).setTween(sec_tl).addTo(controller)
 
+
+// GRIEND SECTION
+var griend_sec = document.getElementById("griend");
+var griend_tl = gsap.timeline()
+
+griend_tl
+.fromTo("#griend .preview-screen",2,{scale:0.23},{scale:1})
+.fromTo(["#griend #overlay-griend","#griend video"],{opacity:0,display:"none"},{opacity:1,display:"flex"})
+.to("#griend .preview-screen",{opacity:0})
+.to("#griend .preview-screen",{zIndex:-1})
+.fromTo("#griend .preview-screen",{display:"block"},{display:"none"})
+// .fromTo("#overlay-griend",2,{backdropFilter: "blur(0px)"},{backdropFilter: "blur(64px)"})
+// .fromTo("#griend .game-on",{opacity:0,translateY:200},{opacity:0.3,translateY:0})
+// .fromTo("#griend .images-cont",{opacity:0,translateY:200},{opacity:1,translateY:0})
+// .fromTo("#griend .about-this",{opacity:0,translateY:200},{opacity:1,translateY:0})
+// .fromTo("#griend .huge-text-name",{opacity:0,translateX:-200},{opacity:1,translateX:0})
+
+let griend_scene = new ScrollMagic.Scene({
+  triggerElement: griend_sec,
+  triggerHook: 0.15,
+  // duration:"100%"
+}).setTween(griend_tl).addTo(controller)
+
+griend_scene.on("enter",()=>{
+  griend_sec.querySelector("video").play()
+})
 
 
 

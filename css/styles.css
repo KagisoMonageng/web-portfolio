@@ -221,6 +221,17 @@
   color: #000;
 }
 
+.preview-screen {
+  scale: 0.23;
+  top: -2px;
+  z-index: 1;
+}
+
+.mac-book {
+  width: 30%;
+  z-index: 0;
+}
+
 .use-app-griend {
   background-color: #2EB722;
   border-radius: 15px;
