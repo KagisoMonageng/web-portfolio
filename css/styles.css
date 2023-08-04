@@ -1,29 +1,16 @@
 #loading-screen {
-  background-color: #000 !important;
+  background-color: rgba(0, 0, 0, 0.6039215686) !important;
   z-index: 999999;
 }
 
 .first-sec {
-  color: #ffffff;
+  color: #212121;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  place-items: start;
-  justify-content: start;
-  flex-direction: column;
-  padding-left: 50px;
+  padding: 0 50px;
   position: relative;
-}
-
-.first-sec::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background: radial-gradient(ellipse farthest-side at center, transparent 0%, rgba(0, 0, 0, 0.235) 100%);
-  pointer-events: none;
 }
 
 .my-name {
@@ -70,6 +57,11 @@
   transform: scale(0.95);
 }
 
+.text-img {
+  position: absolute;
+  opacity: 0.8;
+}
+
 .blink-2 {
   animation: blink-2 4s 2s infinite both;
 }
@@ -77,10 +69,41 @@
 #sroll-ind svg {
   width: 10%;
   margin: auto;
-  fill: white;
+  fill: rgb(41, 41, 41);
   animation: ping 2s ease-in-out infinite both;
 }
 
+@media screen and (max-width: 600px) {
+  .first-sec {
+    padding-left: 10px;
+    padding-right: 10px;
+    place-items: center;
+    justify-content: center;
+  }
+  .first-sec p#hello {
+    margin-bottom: 10px;
+    padding-left: 0;
+    margin-top: 0;
+  }
+  .my-name {
+    font-size: 70px;
+  }
+  .my-name span {
+    font-size: 50px;
+    padding-left: 50px;
+  }
+  .content {
+    width: 100%;
+    padding-left: 0;
+  }
+  .content p {
+    margin: auto;
+    text-align: center;
+  }
+  .content #logos {
+    margin: auto;
+  }
+}
 .sec-sec {
   position: relative;
 }

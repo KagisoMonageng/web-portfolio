@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   overflow-x: hidden;
-  background-image: linear-gradient(to right,#434343, #979797);
+  background-color: #fff;
 }
 *{
   scroll-behavior: smooth;
@@ -47,8 +47,9 @@ section {
 }
 
 .aurora {
-  background: #000;
+  background: #ffffff;
   position: relative;
+  z-index: -1;
 }
 
 .aurora:before,
@@ -60,6 +61,7 @@ section {
   height: 1px;
   border-radius: 100%;
   opacity: 0.18;
+  z-index: -1;
 }
 
 .aurora:before {
@@ -72,12 +74,28 @@ section {
   animation: hue 10s 0s linear infinite, move2 20s 0s linear infinite;
 }
 
-
-
-
-
-
 // Keyframes
+
+@keyframes rotate-clock {
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(360deg)
+  }
+
+  
+}
+@keyframes rotate-c-clock {
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(-360deg)
+  }
+
+  
+}
 
 
 @-webkit-keyframes blink-2 {
