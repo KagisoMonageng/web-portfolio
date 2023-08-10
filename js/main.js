@@ -38,7 +38,8 @@ tl_scroll.to(["#sroll-ind", "#hello"], { opacity: 0, scale: 1.2, delay: 0 })
   .to(["#short-bio", "#logos"], { opacity: 0, translateX: -200, delay: 0 })
 
 var tl_img_text = gsap.timeline()
-tl_img_text.to(".text-img", {rotation: 180, opacity: 0, ease: Power1.easeInOut, stagger: 0.1
+tl_img_text.to(".text-img", {
+  rotation: 180, opacity: 0, ease: Power1.easeInOut, stagger: 0.1
 })
 
 let scr_indicator = new ScrollMagic.Scene({
@@ -59,12 +60,44 @@ var sec_entry = gsap.timeline()
 sec_entry.fromTo("#first-line", { opacity: 0, translateY: 100 }, { opacity: 1, translateY: 0 })
   .fromTo("#my-work", { opacity: 0, translateY: 100 }, { opacity: 1, translateY: 0 });
 
-sec_tl
-  .to("#my-work span", { opacity: 0, display: "none", delay: 3 })
-  .to(["#first-line", "#my-work"], { translateY: -200 })
-  .to("#my-work", { rotation: 90, ease: Power4.easeInOut, delay: 1 })
-  .to("#rotate-text", { rotation: 90, ease: Power4.easeInOut })
-  .fromTo(".big-my-work", { opacity: 0, translateY: 200 }, { opacity: 1, translateY: 0, delay: 1 })
+
+
+// Define a media query
+const mediaQuery = window.matchMedia('(max-width: 991px)');
+
+// Function to be executed when the media query matches
+function handleMediaQueryChange(mediaQuery) {
+  if (mediaQuery.matches) {
+    // Apply styles or execute code for small screens
+    sec_tl
+      .to("#my-work span", { opacity: 0, display: "none", delay: 3 })
+      .to(["#first-line", "#my-work"], { translateY: -200 })
+      .to("#my-work", { rotation: 90, ease: Power4.easeInOut, delay: 1 })
+      .to("#rotate-text", { rotation: 90, ease: Power4.easeInOut })
+      .fromTo(".big-my-work", { opacity: 0, translateY: 200 }, { opacity: 1, translateY: 100, delay: 1 })
+
+  } else {
+    // Apply styles or execute code for larger screens
+    sec_tl
+      .to("#my-work span", { opacity: 0, display: "none", delay: 3 })
+      .to(["#first-line", "#my-work"], { translateY: -200 })
+      .to("#my-work", { rotation: 90, ease: Power4.easeInOut, delay: 1 })
+      .to("#rotate-text", { rotation: 90, ease: Power4.easeInOut })
+      .fromTo(".big-my-work", { opacity: 0, translateY: 200 }, { opacity: 1, translateY: 0, delay: 1 })
+
+  }
+}
+
+// Initial call to handle the media query
+handleMediaQueryChange(mediaQuery);
+
+// Add a listener to execute the function whenever the media query status changes
+mediaQuery.addListener(handleMediaQueryChange);
+
+
+
+
+
 
 
 let sec_section_entry = new ScrollMagic.Scene({

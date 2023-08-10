@@ -73,6 +73,19 @@
   animation: ping 2s ease-in-out infinite both;
 }
 
+@media screen and (max-width: 991px) {
+  .sec-sec p {
+    font-size: 26px;
+    font-weight: 700;
+    color: #282828;
+  }
+  .sec-sec .my-work-warning {
+    font-size: 15px;
+  }
+  .big-my-work {
+    font-size: 100px;
+  }
+}
 @media screen and (max-width: 600px) {
   .first-sec {
     padding-left: 10px;
@@ -117,7 +130,7 @@
 }
 
 .big-my-work {
-  font-size: 100px !important;
+  font-size: 100px;
   font-weight: 700;
   padding-bottom: 15px;
   position: absolute;
