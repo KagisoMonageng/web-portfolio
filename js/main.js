@@ -70,11 +70,9 @@ function handleMediaQueryChange(mediaQuery) {
   if (mediaQuery.matches) {
     // Apply styles or execute code for small screens
     sec_tl
-      .to("#my-work span", { opacity: 0, display: "none", delay: 3 })
-      .to(["#first-line", "#my-work"], { translateY: -200 })
-      .to("#my-work", { rotation: 90, ease: Power4.easeInOut, delay: 1 })
-      .to("#rotate-text", { rotation: 90, ease: Power4.easeInOut })
-      .fromTo(".big-my-work", { opacity: 0, translateY: 200 }, { opacity: 1, translateY: 100, delay: 1 })
+      .to(["#first-line", "#my-work"], { translateY: -200 ,delay:2})
+      .to("#my-work", { translateY: -100 , ease: Power4.easeInOut, delay: 1 })
+      .fromTo(".big-my-work", { opacity: 0, translateY: 200 }, { opacity: 1, translateY: -100, delay: 1 })
 
   } else {
     // Apply styles or execute code for larger screens

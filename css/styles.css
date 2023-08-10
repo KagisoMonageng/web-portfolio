@@ -84,9 +84,11 @@
   }
   .big-my-work {
     font-size: 100px;
+    position: initial !important;
   }
-}
-@media screen and (max-width: 600px) {
+  .big-my-work br {
+    display: none;
+  }
   .first-sec {
     padding-left: 10px;
     padding-right: 10px;
