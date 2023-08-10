@@ -114,8 +114,7 @@ var griend_sec = document.getElementById("griend");
 var griend_tl = gsap.timeline()
 
 griend_tl
-  .fromTo("#griend .preview-screen", 2, { scale: 0.23 }, { scale: 1 })
-  .fromTo(["#griend #overlay-griend", "#griend video"], { opacity: 0, display: "none" }, { opacity: 1, display: "flex" })
+  .fromTo(["#griend #overlay-griend", "#griend video"], { opacity: 0 }, { opacity: 1 })
   .to("#griend .preview-screen", { opacity: 0 })
   .to("#griend .preview-screen", { zIndex: -1 })
   .fromTo("#griend .preview-screen", { display: "block" }, { display: "none" })
@@ -127,7 +126,7 @@ griend_tl
 
 let griend_scene = new ScrollMagic.Scene({
   triggerElement: griend_sec,
-  triggerHook: 0.15,
+  triggerHook: 0.8,
   // duration:"100%"
 }).setTween(griend_tl).addTo(controller)
 
