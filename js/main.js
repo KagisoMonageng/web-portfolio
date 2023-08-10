@@ -15,7 +15,9 @@ tl.fromTo('#loading-screen', { opacity: 1, display: 'flex' }, { opacity: 0, disp
   .fromTo(first_sec, { opacity: 0 }, { opacity: 1, ease: Power4.easeIn })
   .fromTo("#hello", 2, { opacity: 0, translateX: 200 }, { opacity: 1, translateX: 0 })
   .fromTo("#my-name", 2, { opacity: 0, translateX: -200 }, { opacity: 0.5, translateX: 0 })
-  // .fromTo("#my-image",{opacity:0},{opacity:1})
+  .fromTo(".text-img", { rotation: 0, opacity: 0 }, {
+    rotation: 90, opacity: 0.8, ease: Power1.easeInOut, stagger: 0.1
+  })
   .fromTo("#surname", 1, { opacity: 0 }, { opacity: 0.8 })
   .fromTo("#short-bio", { opacity: 0 }, { opacity: 1 })
   .fromTo(logos[0], { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1 })
@@ -36,8 +38,7 @@ tl_scroll.to(["#sroll-ind", "#hello"], { opacity: 0, scale: 1.2, delay: 0 })
   .to(["#short-bio", "#logos"], { opacity: 0, translateX: -200, delay: 0 })
 
 var tl_img_text = gsap.timeline()
-tl_img_text.fromTo(".text-img", { rotation: 0, opacity: 0.8 }, {
-  rotation: 90, opacity: 0, ease: Power1.easeInOut, stagger: 0.1
+tl_img_text.to(".text-img", {rotation: 180, opacity: 0, ease: Power1.easeInOut, stagger: 0.1
 })
 
 let scr_indicator = new ScrollMagic.Scene({
