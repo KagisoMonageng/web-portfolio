@@ -36,8 +36,10 @@ section {
   display: flex;
   justify-content: center;
   place-items: center;
-  overflow-x: hidden;
+  
 }
+
+
 
 .gradient-text {
   background: #12c2e9;
@@ -73,6 +75,12 @@ section {
 .aurora:after {
   box-shadow: 0 0 35vmax 35vmax #0ff;
   animation: hue 10s 0s linear infinite, move2 20s 0s linear infinite;
+}
+
+
+@media screen and (max-width: 991px) {
+ 
+  section {overflow-x: hidden;}
 }
 
 // Keyframes

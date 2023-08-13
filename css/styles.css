@@ -73,52 +73,6 @@
   animation: ping 2s ease-in-out infinite both;
 }
 
-@media screen and (max-width: 991px) {
-  .sec-sec p {
-    font-size: 26px;
-    font-weight: 700;
-    color: #282828;
-  }
-  .sec-sec .my-work-warning {
-    font-size: 15px;
-  }
-  .big-my-work {
-    font-size: 100px;
-    position: initial !important;
-  }
-  .big-my-work br {
-    display: none;
-  }
-  .first-sec {
-    padding-left: 10px;
-    padding-right: 10px;
-    place-items: center;
-    justify-content: center;
-  }
-  .first-sec p#hello {
-    margin-bottom: 10px;
-    padding-left: 0;
-    margin-top: 0;
-  }
-  .my-name {
-    font-size: 70px;
-  }
-  .my-name span {
-    font-size: 50px;
-    padding-left: 50px;
-  }
-  .content {
-    width: 100%;
-    padding-left: 0;
-  }
-  .content p {
-    margin: auto;
-    text-align: center;
-  }
-  .content #logos {
-    margin: auto;
-  }
-}
 .sec-sec {
   position: relative;
 }
@@ -185,7 +139,6 @@
   animation: hue 10s 0s linear infinite, move2 20s 0s linear infinite;
 }
 
-/* Animation */
 .green-sec-bg {
   background-repeat: no-repeat;
   background-size: cover;
@@ -196,6 +149,7 @@
   font-size: 120px;
   font-family: "valorax";
   line-height: 0.5;
+  color: #fff;
 }
 
 .skoolify {
@@ -250,6 +204,10 @@
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 10px;
+}
+
+.use-app-griend {
+  color: #fff;
 }
 
 .about-this.skoolify p {
@@ -331,4 +289,91 @@
 
 .screenshot:hover {
   transform: scale(1.09);
+}
+
+@media screen and (max-width: 991px) {
+  .sec-sec p {
+    font-size: 26px;
+    font-weight: 700;
+    color: #282828;
+  }
+  .sec-sec .my-work-warning {
+    font-size: 15px;
+  }
+  .big-my-work {
+    font-size: 100px;
+    position: initial !important;
+  }
+  .big-my-work br {
+    display: none;
+  }
+  .first-sec {
+    padding-left: 10px;
+    padding-right: 10px;
+    place-items: center;
+    justify-content: center;
+  }
+  .first-sec p#hello {
+    margin-bottom: 10px;
+    padding-left: 0;
+    margin-top: 0;
+  }
+  .my-name {
+    font-size: 70px;
+  }
+  .my-name span {
+    font-size: 50px;
+    padding-left: 50px;
+  }
+  .content {
+    width: 100%;
+    padding-left: 0;
+  }
+  .content p {
+    margin: auto;
+    text-align: center;
+  }
+  .content #logos {
+    margin: auto;
+  }
+  .huge-text-name {
+    font-size: 36px;
+  }
+  .huge-text-name span {
+    font-size: 16px;
+  }
+  .about-this {
+    width: 100%;
+  }
+  .game-on {
+    display: none;
+  }
+  #griend .content, #skoolify .content {
+    width: 100%;
+    padding: 50px 15px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #griend .content p, #skoolify .content p {
+    margin: revert;
+    text-align: left;
+  }
+  .images-cont,
+  .screenshot {
+    display: none;
+  }
+  #griend, #skoolify {
+    overflow: hidden;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #overlay-griend {
+    background-color: rgba(0, 0, 0, 0.6588235294);
+  }
+  #skoolify .huge-text-name {
+    font-size: 54px !important;
+  }
+  #skoolify .huge-text-name span {
+    font-size: 50px !important;
+  }
 }/*# sourceMappingURL=styles.css.map */
