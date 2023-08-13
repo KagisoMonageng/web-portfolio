@@ -353,6 +353,13 @@
     transform: scale(1.09);
 }
 
+.other-work{
+    height: 200px;
+}
+.github-link{
+    width: 50px;
+}
+
 @media screen and (max-width: 991px) {
     .sec-sec p {
         font-size: 26px;
@@ -448,7 +455,6 @@
     #overlay-griend{
         background-color: #000000a8;
     }
-
     #skoolify .huge-text-name{font-size: 54px !important;}
     #skoolify .huge-text-name span{font-size: 50px !important;}
     #skoolify .images-cont{display: none;}

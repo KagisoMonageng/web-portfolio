@@ -92,12 +92,6 @@ handleMediaQueryChange(mediaQuery);
 // Add a listener to execute the function whenever the media query status changes
 mediaQuery.addListener(handleMediaQueryChange);
 
-
-
-
-
-
-
 let sec_section_entry = new ScrollMagic.Scene({
   triggerElement: "#first-line",
   triggerHook: 0.9
@@ -118,11 +112,6 @@ griend_tl
   .to("#griend .preview-screen", { opacity: 0 })
   .to("#griend .preview-screen", { zIndex: -1 })
   .fromTo("#griend .preview-screen", { display: "block" }, { display: "none" })
-// .fromTo("#overlay-griend",2,{backdropFilter: "blur(0px)"},{backdropFilter: "blur(64px)"})
-// .fromTo("#griend .game-on",{opacity:0,translateY:200},{opacity:0.3,translateY:0})
-// .fromTo("#griend .images-cont",{opacity:0,translateY:200},{opacity:1,translateY:0})
-// .fromTo("#griend .about-this",{opacity:0,translateY:200},{opacity:1,translateY:0})
-// .fromTo("#griend .huge-text-name",{opacity:0,translateX:-200},{opacity:1,translateX:0})
 
 let griend_scene = new ScrollMagic.Scene({
   triggerElement: griend_sec,

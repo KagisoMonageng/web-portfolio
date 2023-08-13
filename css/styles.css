@@ -291,6 +291,14 @@
   transform: scale(1.09);
 }
 
+.other-work {
+  height: 200px;
+}
+
+.github-link {
+  width: 50px;
+}
+
 @media screen and (max-width: 991px) {
   .sec-sec p {
     font-size: 26px;
