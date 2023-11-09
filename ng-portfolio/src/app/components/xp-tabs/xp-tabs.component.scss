@@ -1,0 +1,46 @@
+.tabLink {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    padding: 20px 40px;
+    & p{
+        display: none;
+    }
+
+    &.active {
+        // filter: drop-shadow(1px 1px 20px rgba(0, 0, 0, 0.2));
+        
+        & img {
+            transform: scale(1.05) translateY(-30px);
+            border-bottom: 1px solid;
+        
+
+        }
+        & p{
+            display: initial;
+        }
+    }
+
+}
+
+.tab-mainContent{
+    text-align: center;
+    margin-top: 30px;
+    & h3{
+        font-size: 18px;
+        font-weight: 300;
+    }
+    & h4{
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    & p{
+        font-weight: 300;
+        width: 50%;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+
+}

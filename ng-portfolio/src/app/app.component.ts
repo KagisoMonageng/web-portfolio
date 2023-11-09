@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   title = '';
   ngOnInit(): void {
    
-    gsap.fromTo(".intro-img",{translateY:0,skewY:0},{translateY:-20,skewY:10,scrollTrigger:{
+    gsap.fromTo(".intro-img",{translateY:0},{translateY:-20,scrollTrigger:{
       trigger:".intro-img",
       start:"top 30%"
     }, onComplete: ()=>{

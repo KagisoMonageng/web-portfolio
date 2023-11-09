@@ -1,12 +1,43 @@
-<button tab class="btn btn-primary tabLink" rel="tab1">Tab</button>
-<button tab class="btn btn-primary tabLink" rel="tab2">Tab</button>
+<div class="flex flex-col my-14">
+  <div class="flex relative justify-center">
+    <button class="tabLink relative" (click)="selectTab(1)" [class.active]="selectedTab === 1">
+      <img src="../../../assets/bits-logo.png" alt="" srcset=""
+        class="w-32   hover:scale-105 transition-all duration-200">
+      <p class="absolute bottom-0 font-light">2021 - 2022</p>
+    </button>
+    <button class="tabLink active relative" (click)="selectTab(2)" [class.active]="selectedTab === 2">
+      <img src="../../../assets/bastion-logo.png" alt="" srcset=""
+        class="w-32 hover:scale-105 transition-all duration-200">
+      <p class="absolute bottom-0 font-light">Current</p>
+    </button>
+    <button class="tabLink relative" (click)="selectTab(3)" [class.active]="selectedTab === 3">
+      <img src="../../../assets/da-logo.png" alt="" srcset="" class="w-32  hover:scale-105 transition-all duration-200">
+      <p class="absolute bottom-0 font-light">2022 - 2023</p>
+    </button>
+  </div>
 
-<input type="range" min="0" max="100" value="25" class="range" step="25" />
-<div class="w-full flex justify-between text-xs px-2">
-  <span>|</span>
-  <span>|</span>
-  <span>|</span>
-  <span>|</span>
-  <span>|</span>
+  <div class="tab-content">
+    <div class="tab-mainContent" *ngIf="selectedTab === 1">
+      <h3>Bongani IT Solutions Pty Ltd</h3>
+      <h4 class="text-secondary">Web Developer Intern</h4>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates illo similique vero quia doloribus vel
+        rerum? Nobis voluptatibus ducimus commodi? Enim error vero fuga, sit accusantium voluptate officiis sed
+        nesciunt.</p>
+    </div>
+    <div class="tab-mainContent" *ngIf="selectedTab === 2">
+      <h3>Bastion Group</h3>
+      <h4 class="text-secondary">Junior Web Developer</h4>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates illo similique vero quia doloribus vel
+        rerum? Nobis voluptatibus ducimus commodi? Enim error vero fuga, sit accusantium voluptate officiis sed
+        nesciunt.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi nihil dolor distinctio, optio ut asperiores quae quisquam ipsa vel sint laboriosam qui praesentium voluptatum est. Est totam maxime dolores quia.</p>
+    </div>
+    <div class="tab-mainContent" *ngIf="selectedTab === 3">
+      <h3>The Digital Academy</h3>
+      <h4 class="text-secondary">Junior Fullstack Developer</h4>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates illo similique vero quia doloribus vel
+        rerum? Nobis voluptatibus ducimus commodi? Enim error vero fuga, sit accusantium voluptate officiis sed
+        nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aliquam voluptatibus tenetur blanditiis dignissimos, adipisci nemo quidem veritatis accusantium voluptatum itaque commodi iste quibusdam! Exercitationem impedit iste voluptatum reprehenderit eligendi.</p>
+    </div>
+  </div>
 </div>
-
