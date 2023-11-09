@@ -25,7 +25,6 @@ export class AppComponent implements OnInit {
     gsap.fromTo(".intro-img",{translateY:0,skewY:0},{translateY:-20,skewY:10,scrollTrigger:{
       trigger:".intro-img",
       start:"top 30%"
-      
     }, onComplete: ()=>{
       setTimeout(() => {
         gsap.to(".intro-img",{translateY:0,skewY:0})
