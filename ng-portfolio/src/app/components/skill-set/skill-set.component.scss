@@ -1,0 +1,22 @@
+:root {
+    --gradient-shadow: linear-gradient(45deg,
+            #fb0094,
+            #0000ff,
+            #00ff00,
+            #ffff00,
+            #ff0000,
+            #fb0094,
+            #0000ff,
+            #00ff00,
+            #ffff00,
+            #ff0000);
+}
+
+.mock-glow {
+    transform-origin: bottom;
+    transform: rotateX(-45deg) rotateZ(-45deg);
+}
+
+.col-text p{
+    font-size: 20px;
+}

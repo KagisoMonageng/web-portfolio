@@ -22,12 +22,16 @@ export class AppComponent implements OnInit {
   title = '';
   ngOnInit(): void {
    
-    gsap.fromTo(".intro-img",{translateY:0},{translateY:-20,scrollTrigger:{
+    gsap.fromTo(".intro-img",{opacity:0, translateY:20},{translateY:0,opacity:1,duration:1 ,stagger:0.3})
+    gsap.fromTo(".intro-img",{skewY:0, translateY:0},{ translateY:-10,skewY:5, ease:"power1.inOut",scrollTrigger:{
       trigger:".intro-img",
-      start:"top 30%"
+      start:"top 60%",
+      end:"bottom 60%",
+      scrub:true,
+      
     }, onComplete: ()=>{
       setTimeout(() => {
-        gsap.to(".intro-img",{translateY:0,skewY:0})
+        gsap.to(".intro-img",{translateY:0 ,skewY:0})
       }, 200);
     }})
   }

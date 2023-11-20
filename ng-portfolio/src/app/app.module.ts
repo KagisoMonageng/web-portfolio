@@ -5,16 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { XpTabsComponent } from './components/xp-tabs/xp-tabs.component';
+import { HotToastModule } from '@ngneat/hot-toast';
+import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { SkillSetComponent } from './components/skill-set/skill-set.component'
+import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    XpTabsComponent
+    XpTabsComponent,
+    SkillSetComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HotToastModule.forRoot(),
+    ReactiveFormsModule,
+    HttpClientModule,
+    HighchartsChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

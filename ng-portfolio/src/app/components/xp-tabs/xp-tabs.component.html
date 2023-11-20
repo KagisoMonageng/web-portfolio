@@ -1,43 +1,33 @@
-<div class="flex flex-col my-14">
-  <div class="flex relative justify-center">
-    <button class="tabLink relative" (click)="selectTab(1)" [class.active]="selectedTab === 1">
-      <img src="../../../assets/bits-logo.png" alt="" srcset=""
-        class="w-32   hover:scale-105 transition-all duration-200">
-      <p class="absolute bottom-0 font-light">2021 - 2022</p>
-    </button>
-    <button class="tabLink active relative" (click)="selectTab(2)" [class.active]="selectedTab === 2">
-      <img src="../../../assets/bastion-logo.png" alt="" srcset=""
-        class="w-32 hover:scale-105 transition-all duration-200">
-      <p class="absolute bottom-0 font-light">Current</p>
-    </button>
-    <button class="tabLink relative" (click)="selectTab(3)" [class.active]="selectedTab === 3">
-      <img src="../../../assets/da-logo.png" alt="" srcset="" class="w-32  hover:scale-105 transition-all duration-200">
-      <p class="absolute bottom-0 font-light">2022 - 2023</p>
-    </button>
-  </div>
 
-  <div class="tab-content">
-    <div class="tab-mainContent" *ngIf="selectedTab === 1">
+
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-10  mt-5 px-5 md:px-10 lg:px-16">
+ 
+    <div class="tab-mainContent w-full" >
+      
       <h3>Bongani IT Solutions Pty Ltd</h3>
       <h4 class="text-secondary">Web Developer Intern</h4>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates illo similique vero quia doloribus vel
-        rerum? Nobis voluptatibus ducimus commodi? Enim error vero fuga, sit accusantium voluptate officiis sed
-        nesciunt.</p>
+      <p>During my internship at BITS, I served as a web developer within a collaborative team. Our primary
+        responsibilities involved constructing and overseeing websites tailored to meet clients' individual
+        requirements. The key technologies employed in our projects were PHP, WordPress, and Angular.</p>
     </div>
-    <div class="tab-mainContent" *ngIf="selectedTab === 2">
+    <div class="tab-mainContent w-full" >
+     
       <h3>Bastion Group</h3>
       <h4 class="text-secondary">Junior Web Developer</h4>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates illo similique vero quia doloribus vel
-        rerum? Nobis voluptatibus ducimus commodi? Enim error vero fuga, sit accusantium voluptate officiis sed
-        nesciunt.</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi nihil dolor distinctio, optio ut asperiores quae quisquam ipsa vel sint laboriosam qui praesentium voluptatum est. Est totam maxime dolores quia.</p>
+      <p>Presently, I hold the position of a junior web developer at Bastion Group, where my responsibilities include
+        the creation of websites and interactive web applications. I utilize JavaScript frameworks such as Angular and
+        Vue.js, along with server-side technologies like Node.js and PHP. For database management, I work with MySQL and
+        PostgreSQL.</p>
     </div>
-    <div class="tab-mainContent" *ngIf="selectedTab === 3">
+    <div class="tab-mainContent w-full" >
+    
       <h3>The Digital Academy</h3>
-      <h4 class="text-secondary">Junior Fullstack Developer</h4>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates illo similique vero quia doloribus vel
-        rerum? Nobis voluptatibus ducimus commodi? Enim error vero fuga, sit accusantium voluptate officiis sed
-        nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aliquam voluptatibus tenetur blanditiis dignissimos, adipisci nemo quidem veritatis accusantium voluptatum itaque commodi iste quibusdam! Exercitationem impedit iste voluptatum reprehenderit eligendi.</p>
+      <h4 class="text-secondary">Fullstack Developer Intern</h4>
+      <p>During my internship at The Digital Academy, I served as a full-stack developer, focusing on the development of
+        mobile and web applications. I utilized Angular and Vue.js for client-side technologies, and for server-side
+        languages, I employed Node.js and Java Springboot. The projects involved creating comprehensive applications
+        with integrations to both MongoDB and Postgres databases.</p>
     </div>
-  </div>
+ 
 </div>

@@ -4,41 +4,77 @@
     justify-content: center;
     transition: all 0.3s ease-in-out;
     padding: 20px 40px;
-    & p{
+
+    & p {
         display: none;
     }
 
     &.active {
         // filter: drop-shadow(1px 1px 20px rgba(0, 0, 0, 0.2));
-        
+
         & img {
             transform: scale(1.05) translateY(-30px);
             border-bottom: 1px solid;
-        
+
 
         }
-        & p{
+
+        & p {
             display: initial;
         }
     }
 
 }
 
-.tab-mainContent{
+.tab-mainContent {
     text-align: center;
     margin-top: 30px;
-    & h3{
+    @apply border border-neutral px-5 py-4 relative flex flex-col place-items-center;
+
+    &:hover {
+        cursor: pointer;
+
+        &::after {
+            width: 250px;
+        }
+    }
+
+    & .cursor-st {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        @apply bg-neutral;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 0px;
+        height: 5px;
+        @apply bg-secondary;
+        bottom: -2.5px;
+        transform-origin: "50%";
+        transition: all 0.3s;
+
+
+    }
+
+    & h3 {
         font-size: 18px;
         font-weight: 300;
     }
-    & h4{
+
+    & h4 {
         font-size: 16px;
         font-weight: 700;
         margin-bottom: 20px;
     }
-    & p{
+
+    & p {
         font-weight: 300;
-        width: 50%;
         margin: auto;
         margin-bottom: 15px;
     }

@@ -1,3 +1,4 @@
+@use 'node_modules/@ngneat/hot-toast/src/styles/styles.scss';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,4 +6,18 @@
 body{
     min-height: 100vh;
     @apply text-neutral;
+}
+
+h1, h2{
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+p{
+    margin-bottom: 20px;
+    font-weight: 300;
+    line-height: 1.5;
 }
