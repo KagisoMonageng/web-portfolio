@@ -28,16 +28,9 @@ export class XpTabsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    const mainContents = document.querySelectorAll('.tab-mainContent');
+   
 
-    gsap.fromTo(mainContents,{translateY:100,opacity:0},{translateY:0,opacity:1, stagger:0.1,scrollTrigger:{
-      trigger:mainContents,
-      start:"top 60%",
-    }, onComplete: ()=>{
-      setTimeout(() => {
-        gsap.to(".intro-img",{translateY:0,skewY:0})
-      }, 200);
-    }})
+    
 
     
    

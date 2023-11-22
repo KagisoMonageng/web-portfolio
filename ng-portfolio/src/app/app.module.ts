@@ -10,13 +10,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { SkillSetComponent } from './components/skill-set/skill-set.component'
 import { HighchartsChartModule } from 'highcharts-angular';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     XpTabsComponent,
-    SkillSetComponent
+    SkillSetComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
