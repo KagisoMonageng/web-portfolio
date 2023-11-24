@@ -21,9 +21,15 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.get('/',(req,res)=>{
+    res.send('<div style="width: 100%; height:100vh; display:flex; flex-direction:column;gap:1rem ; justify-content:center; place-items:center;"> <div style="width:100px; height:100px; background-color: green; border-radius:50%"></div><h1 style="font-family:sans-serif;padding:0;margin:0;"> Server is running</h1> <p style="padding:0;margin:0;font-family:sans-serif;">Ready to take your requests</p></div>');
+  })
+
 app.listen(port, () => {
     console.log("Server running on port 8080");
 });
+
+
 
 var nodemailer = require("nodemailer");
 var transporter = nodemailer.createTransport({
