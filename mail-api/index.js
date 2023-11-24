@@ -12,16 +12,14 @@ const port = 8080;
 
 app.use(express.json());
 
-app.use(cors(corsOptions))
-
-
-// app.use(function (req, res, next) {
-//     res.setHeader('Access-Control-Allow-Origin', 'https://localhost:4200');
-//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-//     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-//     res.setHeader('Access-Control-Allow-Credentials', true);
-//     next();
-// });
+// app.use(cors(corsOptions))
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', 'https://web-portfolio-flk3.vercel.app/');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+});
 
 app.listen(port, () => {
     console.log("Server running on port 8080");
