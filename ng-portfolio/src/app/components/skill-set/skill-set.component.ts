@@ -43,7 +43,7 @@ export class SkillSetComponent implements OnInit {
       onStart:()=>{
         gsap.to('#nav-id',{color:"#fff"})
       },onReverseComplete:()=>{
-        gsap.to('#nav-id',{color:"#232325"})
+        gsap.to('#nav-id',{color:"#fff"})
       }
     })
 
@@ -62,13 +62,13 @@ export class SkillSetComponent implements OnInit {
           gsap.fromTo('.install-text', { text: '' }, { text: 'Installing ...', duration: 3 })
         }
       })
-      .to('#code-1', { translateY: -500, duration: 4 })
+      .to('#code-1', { translateY: -700, duration: 4 })
       .fromTo('#code-2', { opacity: 0, rotateX: -45, rotateY: -45 }, {
         rotateX: 0, rotateY: 0, rotateZ: 0, opacity: 1, duration: 5, onStart: () => {
           gsap.fromTo('.install-text2', { text: '' }, { text: 'Creating app ...', duration: 3 })
         }
       })
-      .to('#code-2', { translateY: -500, duration: 4 })
+      .to('#code-2', { translateY: -700, duration: 4 })
       .fromTo('.skills-img', { opacity: 0, rotate: 0 }, { opacity: 1, rotate: 30, duration: 5, stagger: 3 })
       .fromTo('.creative', { opacity: 0 }, {
         opacity: 1, duration: 3, onComplete: () => {
