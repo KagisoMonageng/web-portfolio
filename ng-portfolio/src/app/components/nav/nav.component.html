@@ -1,9 +1,10 @@
-<nav class="navbar fixed top-0 w-full bg-transparent backdrop-blur-md justify-between lg:justify-between px-5 md:px-10 lg:px-16 z-10" id="nav-id">
+<nav class="navbar fixed top-0 w-full bg-transparent backdrop-blur-md justify-between lg:justify-between px-5 md:px-10 lg:px-16 z-10"
+    id="nav-id">
     <p class="text-lg lg:text-2xl">Kag<span class="font-bold">iiso<span class="text-secondary">.</span></span></p>
     <nav class="navbar-center hidden lg:flex gap-6">
-        <a href="javaScript:void(0)" class="font-light hover:text-secondary transition-all" rel="intro-sec">Introduction</a>
+        <!-- <a href="javaScript:void(0)" class="font-light hover:text-secondary transition-all" rel="intro-sec">Introduction</a>
         <a href="javaScript:void(0)" class="font-light hover:text-secondary transition-all" rel="about-sec">About</a>
-        <a href="javaScript:void(0)" class="font-light hover:text-secondary transition-all " rel="resume-sec">Resume</a>
+        <a href="javaScript:void(0)" class="font-light hover:text-secondary transition-all " rel="resume-sec">Resume</a> -->
     </nav>
     <label for="my_modal_7"
         class="action-link font-bold hidden lg:flex text-white py-3 px-4 transition-all gap-3 bg-neutral hover:bg-transparent hover:text-neutral hover:border">
@@ -18,52 +19,59 @@
 
 
     <!-- Put this part before </body> tag -->
-    <input type="checkbox" id="my_modal_7" class="modal-toggle" />
-    <div class="modal backdrop-blur-md">
-        <div class="modal-box">
-            <h3 class="text-lg font-light mb-5">Send me a mail</h3>
 
-            <form [formGroup]="mailForm" (ngSubmit)="submitForm(mailForm)">
-                <div class="grid gap-x-4 grid-cols-1 lg:grid-cols-2 mb-4">
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-light" for="fullName">Full Name</label>
-                        <input class="input input-accent h-9 placeholder:font-light" placeholder="Josh Banner" type="text" formControlName="name" [required]="true">
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-light" for="email">Email</label>
-                        <input  class="input input-accent h-9 placeholder:font-light" placeholder="josh@recruit.co.za" type="email" [email]="true" formControlName="email" [required]="true">
-                    </div>
-                </div>
-                <div class="flex flex-col gap-2 mb-4">
-                    <label class="text-sm font-light" for="cell">Cellphone</label>
-                    <input  class="input input-accent h-9 placeholder:font-light" placeholder="0110201235" maxlength="10" type="number"  formControlName="cell" [required]="true">
-                </div>
-                <div class="flex flex-col gap-2">
-                    <label class="text-sm font-light" for="message">Message (Optional)</label>
-                    <textarea formControlName="message" placeholder="Hello Kagiso, Please get back to me here." class="textarea textarea-accent w-full placeholder:font-light" rows="3"></textarea>
-                </div>
-
-                <button type="submit" class="btn mt-4 rounded-none btn-neutral font-light capitalize">Send Mail</button>
-
-            </form>
-            
-        </div>
-        <label class="modal-backdrop" for="my_modal_7">Close</label>
-    </div>
 
     <div class="dropdown dropdown-end lg:hidden">
-        <label tabindex="0" class="btn btn-ghost btn-circle">
+        <!-- <label tabindex="0" class="btn btn-ghost btn-circle">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
             </svg>
         </label>
 
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-neutral shadow rounded-box w-52 backdrop-blur-xl">
+        <ul tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 bg-neutral shadow rounded-box w-52 backdrop-blur-xl">
             <li><a href="javaScript:void(0)">Introduction</a></li>
             <li><a href="javaScript:void(0)">About</a></li>
             <li><a href="javaScript:void(0)">Resume</a></li>
-        </ul>
+        </ul> -->
     </div>
 
 </nav>
+
+<input type="checkbox" id="my_modal_7" class="modal-toggle" />
+<div class="modal backdrop-blur-md">
+    <div class="modal-box">
+        <h3 class="text-lg font-light mb-5">Send me a mail</h3>
+
+        <form [formGroup]="mailForm" (ngSubmit)="submitForm(mailForm)">
+            <div class="grid gap-x-4 grid-cols-1 lg:grid-cols-2 mb-4">
+                <div class="flex flex-col gap-2">
+                    <label class="text-sm font-light" for="fullName">Full Name</label>
+                    <input class="input input-accent h-9 placeholder:font-light" placeholder="Josh Banner" type="text"
+                        formControlName="name" [required]="true">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="text-sm font-light" for="email">Email</label>
+                    <input class="input input-accent h-9 placeholder:font-light" placeholder="josh@recruit.co.za"
+                        type="email" [email]="true" formControlName="email" [required]="true">
+                </div>
+            </div>
+            <div class="flex flex-col gap-2 mb-4">
+                <label class="text-sm font-light" for="cell">Cellphone</label>
+                <input class="input input-accent h-9 placeholder:font-light" placeholder="0110201235" maxlength="10"
+                    type="number" formControlName="cell" [required]="true">
+            </div>
+            <div class="flex flex-col gap-2">
+                <label class="text-sm font-light" for="message">Message (Optional)</label>
+                <textarea formControlName="message" placeholder="Hello Kagiso, Please get back to me here."
+                    class="textarea textarea-accent w-full placeholder:font-light" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn mt-4 rounded-none btn-neutral font-light capitalize">Send Mail</button>
+
+        </form>
+
+    </div>
+    <label class="modal-backdrop" for="my_modal_7">Close</label>
+</div>
