@@ -6,7 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class MailerService {
 
-  baseUrl = 'http://localhost:8080';
+  // baseUrl = 'http://localhost:8080';
+  baseUrl = 'https://web-portfolio-mail.vercel.app/';
 
   constructor(private http : HttpClient) { }
 
